@@ -499,31 +499,27 @@ span.expand {
     justify-content: center;
 }
 
-/* #tabs > li > a:first-child {
-    color: #333e48;
-    
-} */
-
 #tabs li a.inactive {
     color:#333e48;
+    font-weight: 400;
 }
 
-#tabs > li .nav-link::first-child {
+#tabs li a {
+    position: relative;
     color: #333e48;
     font-weight: 700;
+    font-size: 20px;
 }
 
-#tabs li a:hover, #tabs li a.inactive:hover {
+
+/* #tabs li a:hover{
     font-weight: 700;
     color:#333e48;
-}
-
-
+} */
 
 .product-img {
     position: relative;
 }
-
 
 .special-product-label {
     position: absolute;
@@ -671,7 +667,7 @@ span.expand {
 
 .nav-tab-content {
     margin-inline-start: calc(33.33333% + 15px);
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #c6c6c6a3;
 }
 
 .hp-tabs-list.tabs-list-row .product-wrapper {
@@ -692,14 +688,14 @@ span.expand {
     content: "";
     width: 1px;
     height: 80%;
-    background: #333e48;
+    background: #c6c6c6a3;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.product-wrapper:hover:after {
+.hp-tabs-list.tabs-list-row .product-wrapper:hover:after {
     transform: rotateX(0);
     opacity: 1;
 }
@@ -710,17 +706,17 @@ span.expand {
     z-index: 20;
 }
 
-.product-wrapper:after {
+.hp-tabs-list.tabs-list-row .product-wrapper:after {
     content: "";
     width: 100%;
     z-index: -1;
-    border: 1px solid #333e48;
-    background: #333e48;
+    border: 1px solid #c6c6c6;
+    background: #c6c6c64d;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
-    bottom: -32px;
+    bottom: -35px;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 5px 0 #c6c6c6;
     transition: all .35s ease 0s;
@@ -735,14 +731,21 @@ span.expand {
 }
 
 .hp-tabs-list.tabs-list-row .product-price {
-    border-bottom: 1px solid #d31515;
+    border-bottom: 1px solid #c6c6c64d;
 }
 
 .product-button {
-    padding: 20px 15px 8px;
+    padding: 18px 0px 8px;
     display: flex;
+    gap: 40px;
     align-items: center;
     justify-content: space-between;
+    transition: all .35s ease 0s;
+    display: none;
+    opacity: 0;
+    transform: translate(0);
+    position: absolute;
+    bottom: -26px;
 }
 
 .quick_shop ,.add-to-wishlist{
@@ -771,4 +774,13 @@ span.expand {
 
 .add-to-wishlist i {
     margin-right: 5px;
+}
+
+
+.hp-tabs-list.tabs-list-row .product-wrapper:hover .product-content .product-button {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0);
+    z-index: 20;
 }
