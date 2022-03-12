@@ -34,3 +34,30 @@ body {
     height: 100%;
     object-fit: cover;
   }
+  .specialproduct .swiper-slide-thumb-active {
+    opacity: .7 !important;
+  }
+
+  .specialproduct{
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .specialproduct2 {
+    height: 80%;
+    width: 100%;
+  }
+
+
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 30px;
+    /* height: 7px; */
+    border-radius: 4px;
+    background: #fed700;
+    transition: all .35s ease 0s;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -23px;
+  }
