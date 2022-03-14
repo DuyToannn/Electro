@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/swiper.css">
     <!--==============BootStrap==============-->
@@ -30,6 +31,13 @@
 </head>
 
 <body>
+    <script>
+        $(document).ready(function () {
+                        $(".navbar-respon").click(function () {
+                            $('.header-navigation').slideToggle(300);
+                        })
+                    })
+    </script>
     <section id="section-header">
         <div class="container">
             <div class="header-content">
@@ -59,6 +67,9 @@
                 </div>
                 <div class="header__bottom-bar">
                     <div class="table-row">
+                        <div class="navbar-respon">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                         <div class="header__logo">
                             <a href="#"><svg version="1.1" x="0px" y="0px" width="125px" height="30px"
                                     viewBox="0 0 175.748 42.52" enable-background="new 0 0 175.748 42.52">
@@ -529,7 +540,6 @@
             </div>
 
         </div>
-
         <script>
             var swiper = new Swiper(".mySwiper", {
                 navigation: {
@@ -540,7 +550,7 @@
         </script>
     </section>
     <div class="clr" style="clear: both;"></div>
-    <div class="spotify-section">
+    <div class="spotify-section" style="display: none;">
         <div class="container">
             <div class="home-banner-item">
                 <div class="row">
@@ -589,7 +599,7 @@
         </div>
     </div>
 
-    <section class="product-block">
+    <section class="product-block" style="display: none;">
         <div class="container">
             <div class="wrap-tab-content">
                 <div class="nav-tab-content">
@@ -1828,7 +1838,7 @@
 
         });
     </script>
-    <section class="product-block2">
+    <section class="product-block2" style="display: none;">
         <div class="container">
             <div class="wrap-tab-content">
                 <div class="nav-tab-content">
@@ -2325,7 +2335,7 @@
             });
         </script>
     </section>
-    <section class="product-block3">
+    <section class="product-block3" style="display: none;">
         <div class="container">
             <div class="title-wrapper">
                 <h3>Bestsellers</h3>
@@ -2821,7 +2831,7 @@
             </div>
         </div>
     </section>
-    <section class="banner-home-item">
+    <section class="banner-home-item" style="display: none;">
         <div class="container">
             <div class="banner-item">
                 <a href="#">
@@ -2833,7 +2843,7 @@
             </div>
         </div>
     </section>
-    <section class="product-block4">
+    <section class="product-block4" style="display: none;">
         <div class="container">
             <div class="title-wrapper">
                 <h3>Newarrivals</h3>
@@ -3173,7 +3183,7 @@
             </div>
         </div>
     </section>
-    <section class="product-block5">
+    <section class="product-block5" style="display: none;">
         <div class="container">
             <div class="product-widget">
                 <div class="row">
@@ -3380,7 +3390,7 @@
             </div>
         </div>
     </section>
-    <section class="partner-wrapper">
+    <section class="partner-wrapper" style="display: none;">
         <div class="container">
             <div class="widget-partner">
                 <div class="swiper partner-slider">
@@ -3443,8 +3453,7 @@
             });
         </script>
     </section>
-
-    <section class="footer">
+    <section class="footer" style="display: none;">
         <div class="container">
             <div class="widget-newsletter">
                 <div class="newsletter-title">

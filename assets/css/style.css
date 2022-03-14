@@ -19,6 +19,13 @@ ul {
   justify-content: space-between;
   padding: 10px 0;
 }
+
+.header__bottom-bar {
+  position: sticky;
+  z-index: 9999;
+  top: -101px;
+  background: #fff;
+}
 .header-contant-box {
 }
 .header-contact-box > ul {

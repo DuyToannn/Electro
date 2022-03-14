@@ -1,0 +1,61 @@
+@media (max-width:768px) {
+    .header__top-bar {
+        display: none;
+    }
+    .search-box {
+        display: none;
+    }
+
+    #section-header {
+        background-color: #fed700;
+    }
+
+    .header__bottom-bar {
+        background-color: #fed700;
+        padding: 5px 0;
+    }
+
+    .header-navigation {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        background: #fff;
+        z-index: 999999;
+    }
+
+    .vertical-menu {
+        width: 100%;
+    }
+
+    #section-header .header-navigation .table-row {
+        display: block;
+        padding: 0;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navbar-respon {
+        display: flex;
+    }
+
+    .navbar-respon > i {
+        font-size: 25px;
+    }
+
+    .number {
+        background-color: #333e48;
+    }
+
+    .n-item {
+        color: #fff;
+    }
+
+    #tv-audio .dropdown-menu.width-100 {
+        width: 100%;
+        position: unset;
+        border: none;
+    }
+}
