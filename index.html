@@ -33,10 +33,18 @@
 <body>
     <script>
         $(document).ready(function () {
-                        $(".navbar-respon").click(function () {
-                            $('.header-navigation').slideToggle(300);
-                        })
-                    })
+            $(".navbar-respon").click(function () {
+                $('.header-navigation').slideToggle(300);
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("span.expand svg").click(function () {
+                $(this).parent().find('.dropdown-menu').slideToggle(300);
+                $(this).parent().siblings().find('.dropdown-menu').slideUp(300);
+            })
+        })
     </script>
     <section id="section-header">
         <div class="container">
@@ -119,438 +127,528 @@
                         </div>
                     </div>
                 </div>
-                <div class="header-navigation">
-                    <div class="table-row">
-                        <div class="vertical-menu">
-                            <div class="navigation">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 75 64">
-                                    <path
-                                        d="M8.896 0h0.832c4.608 0.064 8.768 3.968 9.088 8.576 0.32 3.456-1.472 7.040-4.416 8.832-2.944 1.856-6.976 1.856-9.92 0-2.624-1.6-4.288-4.48-4.48-7.552v-0.832c0.128-4.736 4.224-8.832 8.896-9.024zM22.72 8.256c0.448-2.496 2.88-4.544 5.44-4.48 13.184-0.064 26.368 0 39.616 0 1.408 0 3.008-0.128 4.352 0.576 1.792 0.832 3.008 2.688 3.2 4.672v0.704c-0.128 2.88-2.752 5.376-5.632 5.312-13.184 0.064-26.368 0-39.552 0-1.536 0-3.2 0.128-4.608-0.64-2.112-1.152-3.328-3.776-2.816-6.144zM0 31.616c0.128-4.928 4.544-9.152 9.408-9.024 3.2-0.064 6.336 1.728 8 4.416 1.92 3.072 1.856 7.232-0.128 10.176-1.728 2.624-4.736 4.224-7.872 4.224-4.864 0.128-9.28-4.096-9.408-8.96v-0.832zM22.72 30.848c0.448-2.496 2.88-4.544 5.44-4.48 13.248-0.064 26.432 0 39.616 0 1.472 0 3.008-0.128 4.352 0.512 1.792 0.896 3.008 2.752 3.2 4.736v0.704c-0.128 2.88-2.752 5.376-5.632 5.312-13.184 0-26.368 0-39.552 0-1.536 0-3.2 0.128-4.608-0.64-2.112-1.152-3.328-3.776-2.816-6.144zM3.392 47.36c2.24-1.92 5.504-2.624 8.384-1.856 2.752 0.704 5.184 2.752 6.272 5.312 1.344 3.072 0.896 6.784-1.088 9.408-1.664 2.24-4.288 3.584-7.040 3.776h-0.768c-4.8-0.064-8.96-4.16-9.152-8.96v-0.832c0.128-2.624 1.344-5.184 3.392-6.848zM23.872 51.008c1.216-1.536 3.2-2.24 5.12-2.048 12.8 0 25.6 0 38.4 0 1.6 0 3.264-0.192 4.736 0.576 1.792 0.832 3.008 2.688 3.2 4.672v0.704c-0.192 2.88-2.752 5.376-5.632 5.312-13.696 0-27.392 0-41.152 0-1.664 0.064-3.328-0.576-4.48-1.792-1.856-1.984-1.984-5.376-0.192-7.424z">
-                                    </path>
-                                </svg>
-                                <span>All Departments</span>
-                            </div>
-                            <div class="navbar vertical-navbar">
-                                <div class="collapse navbar-collapse">
-                                    <ul class="main-nav">
-                                        <li class="highlight"><a href="#"><span>Value of the Day</span></a></li>
-                                        <li class="highlight"><a href="#"><span>Top 100 Offers</span></a></li>
-                                        <li class="highlight"><a href="#"><span>New Arrivals</span></a></li>
-                                        <li class="dropdown mega-menu hover-highlight" id="tv-audio">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>TV &amp; Audio</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu hover-highlight width-100">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">All Watches</a></li>
-                                                                <li><a href="#">Men's Watches</a></li>
-                                                                <li><a href="#">Women's Watches</a></li>
-                                                                <li><a href="#">Kid's Watches</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Audio & Video</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">All Cameras & Photography</a></li>
-                                                                <li><a href="#">Camera Accessories</a></li>
-                                                                <li><a href="#">Digital SLR</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Laptop</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">Toshiba</a></li>
-                                                                <li><a href="#">Samsung</a></li>
-                                                                <li><a href="#">Mac</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown mega-menu hover-highlight" id="gadgets">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>Gadgets</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu width-75">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">All Watches</a></li>
-                                                                <li><a href="#">Men's Watches</a></li>
-                                                                <li><a href="#">Women's Watches</a></li>
-                                                                <li><a href="#">Kid's Watches</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Industrial Supplies</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">All Industral Supplies</a></li>
-                                                                <li><a href="#">Lab & Scientific</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown mega-menu hover-highlight" id="accessories">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>Accessories</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu width-75">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown mega-menu hover-highlight" id="gaming">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>TV &amp; Audio</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu width-75">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown mega-menu hover-highlight" id="laptop">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>Gadgets</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu width-75">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown mega-menu hover-highlight" id="mac">
-                                            <div class="dropdown-inner">
-                                                <a href="#" class="dropdown-link"><span>Accessories</span></a>
-                                                <span class="expand"><svg version="1.1"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 23 64">
-                                                        <path
-                                                            d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
-                                                        </path>
-                                                    </svg></span>
-                                            </div>
-                                            <div class="dropdown-menu width-75">
-                                                <div class="row">
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mega-col col-lg-4">
-                                                        <div class="dropdown mega-sub-link">
-                                                            <a href="#"><span>Watches</span></a>
-                                                            <ul class="">
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                                <li><a href="#">123</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidemenu-holder">
-                            <div class="horizontal-menu">
-                                <div class="navbar navbar-expand-lg">
-                                    <div class="collapse navbar-collapse">
-                                        <ul class="menu-list">
-                                            <li class="dropdown active" id="home-nav">
-                                                <div class="dropdown-inner">
-                                                    <a href="#"><span>Home</span></a>
-                                                    <span class="expand"><svg version="1.1"
-                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 41 64">
-                                                            <path
-                                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                                            </path>
-                                                        </svg></span>
-                                                </div>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 2</a></li>
-                                                    <li><a href="#">Home 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown mega-menu" id="catalog-nav">
-                                                <div class="dropdown-inner">
-                                                    <a href="#" class="dropdown-link">
-                                                        <span>Catalog</span>
-                                                    </a>
-                                                    <span class="expand"><svg version="1.1"
-                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 41 64">
-                                                            <path
-                                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                                            </path>
-                                                        </svg></span>
-                                                </div>
-                                                <div class="dropdown-menu">
-                                                    <div class="row">
-                                                        <div class="mega-col col-lg-3">
-                                                            <div class="dropdown mega-sub-link">
-                                                                <a href="#"><span>Single Product Pages</span></a>
-                                                                <ul class="">
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mega-col col-lg-3">
-                                                            <div class="dropdown mega-sub-link">
-                                                                <a href="#"><span>Single Product Pages</span></a>
-                                                                <ul class="">
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mega-col col-lg-3">
-                                                            <div class="dropdown mega-sub-link">
-                                                                <a href="#"><span>Single Product Pages</span></a>
-                                                                <ul class="">
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mega-col col-lg-3">
-                                                            <div class="dropdown mega-sub-link">
-                                                                <a href="#"><span>Single Product Pages</span></a>
-                                                                <ul class="">
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                    <li><a href="/products/consectetur-nibh-eget">Single
-                                                                            Product Sidebar</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="dropdown" id="page-nav">
-                                                <div class="dropdown-inner">
-                                                    <a href="#" class="dropdown-link">
-                                                        <span>Pages</span>
-                                                    </a>
-                                                    <span class="expand"><svg version="1.1"
-                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 41 64">
-                                                            <path
-                                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                                            </path>
-                                                        </svg></span>
-                                                </div>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">About Us</a></li>
-                                                    <li><a href="#">Contact Us</a></li>
-                                                    <li><a href="#">Store Locator</a></li>
-                                                    <li><a href="#">Contact Us</a></li>
-                                                    <li><a href="#">About Us</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="banner-slider">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="viewport-img"></div>
-                        <div class="content-banner">
-                            <div class="heading-banner">
-                                The new<br>
-                                Standard
-                            </div>
-                            <div class="subheading bold-true">UNDER FAVORABLE SMARTWATCHES</div>
-                            <div class="cation bold-false"><span class="title-price">From</span>
-                                <p> <span class="small-size">$</span>749</p>
-                            </div>
-                            <div class="caption-link">
-                                <a class="slider-button" href="">Start Buying</a>
-                            </div>
-                        </div>
-                        <div class="img-layer-box">
-                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/files/watches_520x.png?v=1604560583"
-                                alt="">
-                        </div>
+
+    </section>
+    <div class="header-navigation">
+        <div class="container">
+            <div class="table-row">
+                <script>
+                    $(document).ready(function () {
+                        $('.btnclose').click(function (){
+                            $('.header-navigation').slideToggle()
+                        })
+                    })
+                </script>
+                <div class="btnclose"><span><i class="fa-solid fa-x"></i></span></div>
+                <div class="vertical-menu">
+                    <div class="navigation">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 75 64">
+                            <path
+                                d="M8.896 0h0.832c4.608 0.064 8.768 3.968 9.088 8.576 0.32 3.456-1.472 7.040-4.416 8.832-2.944 1.856-6.976 1.856-9.92 0-2.624-1.6-4.288-4.48-4.48-7.552v-0.832c0.128-4.736 4.224-8.832 8.896-9.024zM22.72 8.256c0.448-2.496 2.88-4.544 5.44-4.48 13.184-0.064 26.368 0 39.616 0 1.408 0 3.008-0.128 4.352 0.576 1.792 0.832 3.008 2.688 3.2 4.672v0.704c-0.128 2.88-2.752 5.376-5.632 5.312-13.184 0.064-26.368 0-39.552 0-1.536 0-3.2 0.128-4.608-0.64-2.112-1.152-3.328-3.776-2.816-6.144zM0 31.616c0.128-4.928 4.544-9.152 9.408-9.024 3.2-0.064 6.336 1.728 8 4.416 1.92 3.072 1.856 7.232-0.128 10.176-1.728 2.624-4.736 4.224-7.872 4.224-4.864 0.128-9.28-4.096-9.408-8.96v-0.832zM22.72 30.848c0.448-2.496 2.88-4.544 5.44-4.48 13.248-0.064 26.432 0 39.616 0 1.472 0 3.008-0.128 4.352 0.512 1.792 0.896 3.008 2.752 3.2 4.736v0.704c-0.128 2.88-2.752 5.376-5.632 5.312-13.184 0-26.368 0-39.552 0-1.536 0-3.2 0.128-4.608-0.64-2.112-1.152-3.328-3.776-2.816-6.144zM3.392 47.36c2.24-1.92 5.504-2.624 8.384-1.856 2.752 0.704 5.184 2.752 6.272 5.312 1.344 3.072 0.896 6.784-1.088 9.408-1.664 2.24-4.288 3.584-7.040 3.776h-0.768c-4.8-0.064-8.96-4.16-9.152-8.96v-0.832c0.128-2.624 1.344-5.184 3.392-6.848zM23.872 51.008c1.216-1.536 3.2-2.24 5.12-2.048 12.8 0 25.6 0 38.4 0 1.6 0 3.264-0.192 4.736 0.576 1.792 0.832 3.008 2.688 3.2 4.672v0.704c-0.192 2.88-2.752 5.376-5.632 5.312-13.696 0-27.392 0-41.152 0-1.664 0.064-3.328-0.576-4.48-1.792-1.856-1.984-1.984-5.376-0.192-7.424z">
+                            </path>
+                        </svg>
+                        <span>All Departments</span>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="viewport-img"></div>
-                        <div class="content-banner">
-                            <div class="heading-banner">
-                                The new<br>
-                                Standard
-                            </div>
-                            <div class="subheading bold-true">UNDER FAVORABLE SMARTWATCHES</div>
-                            <div class="cation bold-false"><span class="title-price">From</span>
-                                <p> <span class="small-size">$</span>749</p>
-                            </div>
-                            <div class="caption-link">
-                                <a class="slider-button" href="">Start Buying</a>
-                            </div>
-                        </div>
-                        <div class="img-layer-box">
-                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/files/Sounds_520x.png?v=1604560581"
-                                alt="">
+                    <div class="navbar vertical-navbar">
+                        <div class="collapse navbar-collapse">
+                            <ul class="main-nav">
+                                <li class="highlight"><a href="#"><span>Value of the Day</span></a></li>
+                                <li class="highlight"><a href="#"><span>Top 100 Offers</span></a></li>
+                                <li class="highlight"><a href="#"><span>New Arrivals</span></a></li>
+                                <li class="dropdown mega-menu hover-highlight" id="tv-audio">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>TV &amp; Audio</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu hover-highlight width-100">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">All Watches</a></li>
+                                                        <li><a href="#">Men's Watches</a></li>
+                                                        <li><a href="#">Women's Watches</a></li>
+                                                        <li><a href="#">Kid's Watches</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Audio & Video</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">All Cameras & Photography</a></li>
+                                                        <li><a href="#">Camera Accessories</a></li>
+                                                        <li><a href="#">Digital SLR</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Laptop</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">Toshiba</a></li>
+                                                        <li><a href="#">Samsung</a></li>
+                                                        <li><a href="#">Mac</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown mega-menu hover-highlight" id="gadgets">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>Gadgets</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu width-75">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">All Watches</a></li>
+                                                        <li><a href="#">Men's Watches</a></li>
+                                                        <li><a href="#">Women's Watches</a></li>
+                                                        <li><a href="#">Kid's Watches</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Industrial Supplies</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">All Industral Supplies</a></li>
+                                                        <li><a href="#">Lab & Scientific</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown mega-menu hover-highlight" id="accessories">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>Accessories</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu width-75">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown mega-menu hover-highlight" id="gaming">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>TV &amp; Audio</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu width-75">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown mega-menu hover-highlight" id="laptop">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>Gadgets</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu width-75">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown mega-menu hover-highlight" id="mac">
+                                    <div class="dropdown-inner">
+                                        <a href="#" class="dropdown-link"><span>Accessories</span></a>
+                                        <span class="expand"><svg version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 23 64">
+                                                <path
+                                                    d="M21.248 34.304q0 0.448-0.32 0.768l-16.704 16.704q-0.32 0.32-0.768 0.32t-0.832-0.32l-1.792-1.792q-0.384-0.384-0.384-0.832t0.384-0.832l14.016-14.016-14.016-14.080q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.832-0.384t0.768 0.384l16.704 16.64q0.32 0.32 0.32 0.832z">
+                                                </path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="dropdown-menu width-75">
+                                        <div class="row">
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-col col-lg-4">
+                                                <div class="dropdown mega-sub-link">
+                                                    <a href="#"><span>Watches</span></a>
+                                                    <ul class="">
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                        <li><a href="#">123</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+    
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next btn-prev-next"></div>
-                <div class="swiper-button-prev btn-prev-next"></div>
+                <div class="sidemenu-holder">
+                    <div class="horizontal-menu">
+                        <div class="navbar navbar-expand-lg">
+                            <div class="collapse navbar-collapse">
+                                <ul class="menu-list">
+                                    <li class="dropdown active" id="home-nav">
+                                        <div class="dropdown-inner">
+                                            <a href="#"><span>Home</span></a>
+                                            <span class="expand"><svg version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 41 64">
+                                                    <path
+                                                        d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                                    </path>
+                                                </svg></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Home 1</a></li>
+                                            <li><a href="#">Home 2</a></li>
+                                            <li><a href="#">Home 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown mega-menu" id="catalog-nav">
+                                        <div class="dropdown-inner">
+                                            <a href="#" class="dropdown-link">
+                                                <span>Catalog</span>
+                                            </a>
+                                            <span class="expand"><svg version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 41 64">
+                                                    <path
+                                                        d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                                    </path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="row">
+                                                <div class="mega-col col-lg-3">
+                                                    <div class="dropdown mega-sub-link">
+                                                        <a href="#"><span>Single Product Pages</span></a>
+                                                        <ul class="">
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mega-col col-lg-3">
+                                                    <div class="dropdown mega-sub-link">
+                                                        <a href="#"><span>Single Product Pages</span></a>
+                                                        <ul class="">
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mega-col col-lg-3">
+                                                    <div class="dropdown mega-sub-link">
+                                                        <a href="#"><span>Single Product Pages</span></a>
+                                                        <ul class="">
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mega-col col-lg-3">
+                                                    <div class="dropdown mega-sub-link">
+                                                        <a href="#"><span>Single Product Pages</span></a>
+                                                        <ul class="">
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                            <li><a href="/products/consectetur-nibh-eget">Single
+                                                                    Product Sidebar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown" id="page-nav">
+                                        <div class="dropdown-inner">
+                                            <a href="#" class="dropdown-link">
+                                                <span>Pages</span>
+                                            </a>
+                                            <span class="expand"><svg version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 41 64">
+                                                    <path
+                                                        d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                                    </path>
+                                                </svg></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="#">Store Locator</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <ul class="mobile-contact-bar">
+                <li class="contact-item">
+                    <a href="#"><i class="fa-solid fa-phone"></i><span>Call</span></a>
+                </li>
+                <li class="contact-item">
+                    <a href="#"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+                </li>
+                <li class="contact-item">
+                    <a href="#"><i class="fa-solid fa-globe"></i><span>Store Info</span></a>
+                </li>
+                <li class="contact-item">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i><span>Direction</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner-slider">
 
+        <div class="swiper bannerslider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="viewport-img"></div>
+                    <div class="content-banner">
+                        <div class="heading-banner">The new<br>Standard
+                        </div>
+                        <div class="subheading bold-true">UNDER FAVORABLE SMARTWATCHES</div>
+                        <div class="cation bold-false"><span class="title-price">From</span>
+                            <p> <span class="small-size">$</span>749</p>
+                        </div>
+                        <div class="caption-link"><a class="slider-button" href="">Start Buying</a></div>
+                    </div>
+                    <div class="img-layer-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/files/watches_520x.png?v=1604560583"alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="viewport-img"></div>
+                    <div class="content-banner">
+                        <div class="heading-banner">
+                            The new<br>
+                            Standard
+                        </div>
+                        <div class="subheading bold-true">UNDER FAVORABLE SMARTWATCHES</div>
+                        <div class="cation bold-false"><span class="title-price">From</span>
+                            <p> <span class="small-size">$</span>749</p>
+                        </div>
+                        <div class="caption-link">
+                            <a class="slider-button" href="">Start Buying</a>
+                        </div>
+                    </div>
+                    <div class="img-layer-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/files/Sounds_520x.png?v=1604560581"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next btn-prev-next"></div>
+            <div class="swiper-button-prev btn-prev-next"></div>
         </div>
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".bannerslider", {
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
             });
         </script>
+    </div>
+    <section class="shopify-section-mobile-department">
+        <div class="container mobile-department">
+            <ul class="mobile-department-list icon-svg">
+                <li>
+                    <a href="/collections/laptops-computer">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="laptop" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                            class="svg-inline--fa fa-laptop fa-w-20 fa-2x">
+                            <path fill="currentColor"
+                                d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"
+                                class=""></path>
+                        </svg>
+                        <span class="text">Computers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/cameras">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="camera" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                            class="svg-inline--fa fa-camera fa-w-16 fa-2x">
+                            <path fill="currentColor"
+                                d="M512 144v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1L376 96h88c26.5 0 48 21.5 48 48zM376 288c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"
+                                class=""></path>
+                        </svg>
+                        <span class="text">Cameras</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/accessories">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                            class="svg-inline--fa fa-mobile fa-w-10 fa-2x">
+                            <path fill="currentColor"
+                                d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
+                                class=""></path>
+                        </svg>
+
+                        <span class="text">Mobiles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/tv-audio">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                            class="svg-inline--fa fa-tv fa-w-20 fa-2x">
+                            <path fill="currentColor"
+                                d="M592 0H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h240v32H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H352v-32h240a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zm-16 352H64V64h512z"
+                                class=""></path>
+                        </svg>
+
+                        <span class="text">TV &amp; Audio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/gaming">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                            class="svg-inline--fa fa-gamepad fa-w-20 fa-2x">
+                            <path fill="currentColor"
+                                d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"
+                                class=""></path>
+                        </svg>
+
+                        <span class="text">Gaming</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
     <div class="clr" style="clear: both;"></div>
-    <div class="spotify-section" style="display: none;">
+    <div class="spotify-section">
         <div class="container">
             <div class="home-banner-item">
                 <div class="row">
@@ -598,8 +696,7 @@
             </div>
         </div>
     </div>
-
-    <section class="product-block" style="display: none;">
+    <section class="product-block">
         <div class="container">
             <div class="wrap-tab-content">
                 <div class="nav-tab-content">
@@ -1838,7 +1935,7 @@
 
         });
     </script>
-    <section class="product-block2" style="display: none;">
+    <section class="product-block2">
         <div class="container">
             <div class="wrap-tab-content">
                 <div class="nav-tab-content">
@@ -2335,7 +2432,7 @@
             });
         </script>
     </section>
-    <section class="product-block3" style="display: none;">
+    <section class="product-block3">
         <div class="container">
             <div class="title-wrapper">
                 <h3>Bestsellers</h3>
@@ -2392,6 +2489,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-grid-item">
                                         <div class="product-wrapper">
                                             <div class="product-head">
                                                 <div class="product-image">
@@ -2406,161 +2507,18 @@
                                                                         class="money">$11.00</span></span>
                                                                 <span class="price-compare"><span
                                                                         class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+                                                                <div class="product-button">
+                                                                    <div class="quick_shop"><i
+                                                                            class="fa-solid fa-eye"></i><span>View</span>
+                                                                    </div>
+                                                                    <div class="product-wishlist">
+                                                                        <a class="add-to-wishlist icon-2 arn_added"
+                                                                            href="#"><i
+                                                                                class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="feature-img">
@@ -2613,6 +2571,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-grid-item">
                                         <div class="product-wrapper">
                                             <div class="product-head">
                                                 <div class="product-image">
@@ -2627,17 +2589,18 @@
                                                                         class="money">$11.00</span></span>
                                                                 <span class="price-compare"><span
                                                                         class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
+                                                                <div class="product-button">
+                                                                    <div class="quick_shop"><i
+                                                                            class="fa-solid fa-eye"></i><span>View</span>
+                                                                    </div>
+                                                                    <div class="product-wishlist">
+                                                                        <a class="add-to-wishlist icon-2 arn_added"
+                                                                            href="#"><i
+                                                                                class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="feature-img">
@@ -2649,6 +2612,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-grid-item">
                                         <div class="product-wrapper">
                                             <div class="product-head">
                                                 <div class="product-image">
@@ -2663,125 +2630,18 @@
                                                                         class="money">$11.00</span></span>
                                                                 <span class="price-compare"><span
                                                                         class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+                                                                <div class="product-button">
+                                                                    <div class="quick_shop"><i
+                                                                            class="fa-solid fa-eye"></i><span>View</span>
+                                                                    </div>
+                                                                    <div class="product-wishlist">
+                                                                        <a class="add-to-wishlist icon-2 arn_added"
+                                                                            href="#"><i
+                                                                                class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-img">
-                                                        <a href="#">
-                                                            <img src="https://cdn.shopify.com/s/files/1/0066/4322/0562/products/Printer_320x.jpg?v=1604559864"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-wrapper">
-                                            <div class="product-head">
-                                                <div class="product-image">
-                                                    <div class="product-group-vendor-name">
-                                                        <div class="product-vendor"><a href="#"
-                                                                title="Bulgari">Bulgari</a></div>
-                                                        <h5 class="product-name balance-row-1"><a href="#">Faxtex
-                                                                Product Sample</a></h5>
-                                                        <div class="product-content">
-                                                            <div class="product-price notranslate">
-                                                                <span class="price-sale"><span
-                                                                        class="money">$11.00</span></span>
-                                                                <span class="price-compare"><span
-                                                                        class="money">$19.00</span></span>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <div class="quick_shop"><i
-                                                                        class="fa-solid fa-eye"></i><span>View</span>
-                                                                </div>
-                                                                <div class="product-wishlist">
-                                                                    <a class="add-to-wishlist icon-2 arn_added"
-                                                                        href="#"><i
-                                                                            class="fa-regular fa-heart"></i><span>Wishlist</span></a>
-                                                                </div>
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="feature-img">
@@ -2799,8 +2659,15 @@
                             <div class="swiper-pagination"></div>
                             <script>
                                 var swiper = new Swiper(".product-block3-tabs3", {
+                                    slidesPerView: 1,
                                     pagination: {
                                         el: ".swiper-pagination",
+                                    },
+                                    breakpoints: {
+                                        768: {
+                                            slidesPerView: 4,
+                                            spaceBetween: 40,
+                                        },
                                     },
                                 });
                             </script>
@@ -2831,7 +2698,7 @@
             </div>
         </div>
     </section>
-    <section class="banner-home-item" style="display: none;">
+    <section class="banner-home-item">
         <div class="container">
             <div class="banner-item">
                 <a href="#">
@@ -2843,7 +2710,7 @@
             </div>
         </div>
     </section>
-    <section class="product-block4" style="display: none;">
+    <section class="product-block4" >
         <div class="container">
             <div class="title-wrapper">
                 <h3>Newarrivals</h3>
@@ -3168,7 +3035,7 @@
                 </div>
                 <script>
                     var swiper = new Swiper(".product-block4-inner", {
-                        slidesPerView: 4,
+                        slidesPerView: 2,
 
                         navigation: {
                             nextEl: ".swiper-button-next",
@@ -3178,12 +3045,18 @@
                             el: ".swiper-pagination",
                             clickable: true,
                         },
+                        breakpoints: {
+                                        768: {
+                                            slidesPerView: 5,
+                                            spaceBetween: 40,
+                                        },
+                                    },
                     });
                 </script>
             </div>
         </div>
     </section>
-    <section class="product-block5" style="display: none;">
+    <section class="product-block5">
         <div class="container">
             <div class="product-widget">
                 <div class="row">
@@ -3390,7 +3263,7 @@
             </div>
         </div>
     </section>
-    <section class="partner-wrapper" style="display: none;">
+    <section class="partner-wrapper">
         <div class="container">
             <div class="widget-partner">
                 <div class="swiper partner-slider">
@@ -3444,16 +3317,22 @@
         </div>
         <script>
             var swiper = new Swiper(".partner-slider", {
-                slidesPerView: 6,
+                slidesPerView: 3,
                 spaceBetween: 30,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+                breakpoints: {
+                                        768: {
+                                            slidesPerView: 6,
+                                            spaceBetween: 40,
+                                        },
+                                    },
             });
         </script>
     </section>
-    <section class="footer" style="display: none;">
+    <section class="footer" >
         <div class="container">
             <div class="widget-newsletter">
                 <div class="newsletter-title">
@@ -3574,10 +3453,11 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                             <div class="footer-block footer-menu">
                                 <h6>Find In Fast<span class="icon">
-                                            <path
-                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                            </path>
-                                        </svg></span></h6>
+                                        <path
+                                            d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                        </path>
+                                        </svg>
+                                    </span></h6>
                                 <ul class="f-list">
                                     <li><a href="/collections/accessories"><span>Accessories </span></a></li>
                                     <li><a href="/collections/gaming"><span>Gaming </span></a></li>
@@ -3593,10 +3473,11 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                             <div class="footer-block footer-menu">
                                 <h6>Information<span class="icon">
-                                            <path
-                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                            </path>
-                                        </svg></span></h6>
+                                        <path
+                                            d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                        </path>
+                                        </svg>
+                                    </span></h6>
                                 <ul class="f-list">
                                     <li><a href="/pages/about-us"><span> About Us </span></a></li>
                                     <li><a href="/pages/contact-us"><span> Contact Us </span></a></li>
@@ -3610,10 +3491,11 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                             <div class="footer-block footer-menu">
                                 <h6 class="hide-title">Customer Care<span class="icon">
-                                            <path
-                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                            </path>
-                                        </svg></span></h6>
+                                        <path
+                                            d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                        </path>
+                                        </svg>
+                                    </span></h6>
                                 <ul class="f-list">
                                     <li><a href="/pages/contact-us"><span>Contact Us</span></a></li>
                                     <li><a href="/pages/arena-wishlist-page"><span>Wishlist</span></a></li>
@@ -3627,10 +3509,11 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                             <div class="footer-block footer-menu">
                                 <h6>In the Spotlight<span class="icon">
-                                            <path
-                                                d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
-                                            </path>
-                                        </svg></span></h6>
+                                        <path
+                                            d="M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z">
+                                        </path>
+                                        </svg>
+                                    </span></h6>
                                 <ul class="f-list">
                                     <li><a href="/collections/cameras"><span>Electronics</span></a></li>
                                     <li><a href="/collections/watches"><span>Toys</span></a></li>
@@ -3644,11 +3527,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bot">
-                <div class="copyright">
-                    <p>© 2022 <strong>Electro</strong>. All Rights Reserved</p>
-                </div>
+            </div>  
+        </div>
+        <div class="footer-bot">
+            <div class="copyright">
+                <p>© 2022 <strong>Electro</strong>. All Rights Reserved</p>
             </div>
         </div>
     </section>

@@ -7,6 +7,13 @@ ul {
   margin: 0 !important;
 }
 
+#section-header {
+  position: sticky;
+    z-index: 9999;
+    top: 0;
+    background: #fff;
+}
+
 .header-content {
 }
 .header__top-bar {
@@ -19,12 +26,8 @@ ul {
   justify-content: space-between;
   padding: 10px 0;
 }
-
-.header__bottom-bar {
-  position: sticky;
-  z-index: 9999;
-  top: -101px;
-  background: #fff;
+.btnclose {
+  display: none;
 }
 .header-contant-box {
 }
@@ -82,7 +85,7 @@ ul {
 }
 
 .header__bottom-bar {
-  padding: 32px 0;
+  padding: 10px 0;
 }
 
 .search-box {
@@ -154,6 +157,9 @@ ul {
   background-color: #fff;
 }
 
+.navbar-respon  {
+  display: none;
+}
 .vertical-navbar .collapse {
   display: block !important;
 }
@@ -178,6 +184,14 @@ ul {
 .navigation span {
   font-size: 14px;
   color: #333e48;
+}
+
+.mobile-contact-bar {
+  display: none;
+}
+
+.shopify-section-mobile-department {
+  display: none;
 }
 
 .vertical-navbar .main-nav > li {
@@ -277,6 +291,7 @@ span.expand {
   opacity: 1;
   visibility: visible;
   z-index: 9999;
+  transition: 0.4s;
 }
 
 .dropdown-menu {
@@ -500,9 +515,9 @@ span.expand {
   background-color: #fff;
 }
 
-.spotify-section {
+/* .spotify-section {
   margin-top: 60px;
-}
+} */
 
 .product-block {
   padding-top: 36px;
